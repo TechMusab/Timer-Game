@@ -14,7 +14,7 @@ const Resultmodal = forwardRef(function ({ targettime, timeremaining,handlereset
     };
   });
   return (
-    <dialog ref={dialog} className="result-modal">
+    <dialog ref={dialog} onClose={handlereset} className="result-modal">
       {isLost && <h2>You LOST</h2>}
       {!isLost && <h2>Score:{score}</h2>}
       <p>
